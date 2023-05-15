@@ -25,8 +25,8 @@ namespace GildedRoseKata
         {
             foreach (var item in Items)
             {
-                if (item is SpecificItem)
-                    (item as SpecificItem).UpdateQuality();
+                if (item is SpecificItem specificItem)
+                    specificItem.UpdateQuality();
                 else
                     UpdateGeneric(item);
             }

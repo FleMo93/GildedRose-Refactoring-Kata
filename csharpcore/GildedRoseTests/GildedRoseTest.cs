@@ -71,6 +71,8 @@ namespace GildedRoseTests
             var app = NewApp(item);
             TestAppItem(app, item, 80, 80, 80, 80);
             item.Quality = 81;
+            app.UpdateQuality();
+            Assert.Equal(item.Quality, 80);
             Assert.Equal(item.SellIn, 0);
             item.SellIn = -1;
             app.UpdateQuality();
